@@ -9,12 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var lblContador: UILabel!
+    @IBOutlet weak var lblMietiqueta: UILabel!
+    var contador = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        lblMietiqueta.text = "Texto desde codigo"
     }
-
+    @IBAction func doTapMiBoton(_ sender: Any) {
+        contador+=1
+        lblContador.text = "Has presionado el boton \(contador) veces"
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
